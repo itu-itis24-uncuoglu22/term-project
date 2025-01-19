@@ -63,8 +63,6 @@ function inputHandler(guess) {
 
         if (trimmed_guess.length == 1) {
             if (trimmed_guess === answer[counter]){
-                window.alert("YOUR GUESS IS CORRECT!");
-
                 revealCard(counter);
                 counter += 1;
 
@@ -75,7 +73,6 @@ function inputHandler(guess) {
                 }
             }
             else {
-                window.alert("YOUR GUESS IS WRONG!");
                 playerLives -= 1;
                 updateHearts();
 
