@@ -21,6 +21,8 @@ function initialize() {
     playerScore = 0;
     playerLives = 3;
     updateHearts();
+    resetCards();
+
     counter = 0;
 }
 
@@ -35,6 +37,24 @@ function updateHearts() {
     }
 }
 
+function resetCards() {
+    for (let i = 0; i<5; i++) {
+        let image = document.getElementById(`card-${i}`);
+        image.src = "card-hidden.svg"; 
+    }
+}
+
+function revealCard(index) {
+    const image = document.getElementById(`card-${index}`);
+    image.src = cardImgs[index];
+}
+
+function revealAllCards(counter) {
+    for (let i = counter; i < 5; i++) {
+        revealCard(i);
+    }
+}
+
 function inputHandler(guess) {
     if (typeof(guess) == "string"){
         let trimmed_guess = guess.replace(/\s+/g, '');
@@ -44,6 +64,8 @@ function inputHandler(guess) {
         if (trimmed_guess.length == 1) {
             if (trimmed_guess === answer[counter]){
                 window.alert("YOUR GUESS IS CORRECT!");
+
+                revealCard(counter);
                 counter += 1;
 
                 updateScore();
@@ -80,6 +102,8 @@ function inputHandler(guess) {
     {
         resetBtn.style.display = "block";
     }
+
+    input.value = "";
 }
 
 function updateScore() {
@@ -100,10 +124,12 @@ function gameOverLose() {
 }
 
 function gameOverWin() {
+    revealAllCards(counter);
     updateScoreWin();
     window.alert("YOU'VE WON!!!");
     submitBtn.disabled = true;
     submitBtn.style.backgroundColor = "gray";
+    resetBtn.style.display = "block";
 }
 
 submitBtn.addEventListener("click", () => inputHandler(input.value));
