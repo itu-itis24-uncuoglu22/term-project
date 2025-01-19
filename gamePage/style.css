@@ -1,0 +1,92 @@
+#main-div {
+    /* border: 2px solid black;  */
+    text-align: center;
+}
+
+/* #image-box {
+    border: 2px solid red;
+} */
+
+#menu-div {
+    display: flex;
+}
+
+#input-div {
+    display: flex; 
+    margin-bottom: 1em; 
+    width: 100%;
+}
+
+#input-div > p {
+    width: 13%; 
+    margin:auto 1em auto auto; 
+    text-align: left; 
+    font-size: 1em;
+}
+
+#input-div > input {
+    width: 26%; 
+    height: 2em; 
+    margin:auto auto auto 0;
+}
+
+#middle > button {
+    width: 39%; 
+    height:2.5em; 
+    margin: 0 auto; 
+    background-color: orangered; 
+    color:white; 
+    font-weight: bold;
+}
+
+#left {
+    width: 33vw;
+}
+
+#middle {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    width: 34vw; 
+    height: 130px;
+}
+
+#right {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    width: 33vw; 
+    height: 130px;
+}
+
+#right div {
+    width: 100%; 
+    margin-bottom: 1em;
+}
+
+#reset-btn {
+    display: none;
+    width: 13.4%; 
+    height:2.5em; 
+    margin: 0 auto; 
+    background-color: black; 
+    color:white; 
+    font-weight: bold;
+}
+
+
+h1 {
+    color: orangered;
+}
+
+
+#score-container {
+    margin:auto; 
+    line-height: 2em;
+}
+
+#life-container {
+    margin:auto;
+}
