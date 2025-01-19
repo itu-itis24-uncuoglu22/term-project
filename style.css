@@ -7,7 +7,17 @@
     max-height: 10em;
 }
 
-#main-div > button {
+#main-div > p {
+    max-width: 20em; 
+    margin: auto;
+    text-align: justify;
+}
+
+#main-div button {
     width: 15em; 
-    height: 3em;
+    height: 3em; 
+    margin: 0 auto; 
+    background-color: rgb(234, 234, 234); 
+    color: black; 
+    font-weight: bold;
 }
