@@ -1,0 +1,13 @@
+#main-div { 
+    text-align: center;
+}
+
+#main-div > img {
+    max-width: 10em; 
+    max-height: 10em;
+}
+
+#main-div > button {
+    width: 15em; 
+    height: 3em;
+}
